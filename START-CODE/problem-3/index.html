@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Problem-1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Problem-3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../tailwind-browser.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: color #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            width: 380px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background-color: #6a82e8;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 40px 20px;
+            font-weight: bold;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: #e8e7e7;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .tab-btn.active {
+            background-color: #2b6df3;
+            color: white;
+        }
+
+        .content {
+            padding: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="header">
+            CADT - Cambodia Academy of Digital Technology 
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="changeTab('about', this)">About Us</button>
+            <button class="tab-btn" onclick="changeTab('programs', this)">Programs</button>
+            <button class="tab-btn" onclick="changeTab('contact', this)">Contact</button>
+        </div>
+
+        <div class="content" id="description">
+            Cambodia Academy of Digital Technology - A leading digital education institution in Cambodia. We develop skilled IT professionas through innovative programss in Computer Science, Software Engineering, and digital innovation.
+        </div>
+    </div>
+
+    <script>
+        function changeTab(tab, btn) {
+            const content = {
+                about: "Cambodia Academy of Digital Technology -A leading tech education institution in Cambodia. We develop skilled IT professionals through innovative programs in Computer Science, Software Engineering, and Digital Innovation.",
+                programs: "Bachelor's programs in Computer Science, Software Engineering, IT Business, | Master's: IT Management. Hands-on learning with industry partnerships, research labs, and expert faculty.",
+                contact: "National Road 6A, Prek Leap, Phnom Penh |  (+855) 23 993 274 | info@cadr.edu.kh | Mon-Fri 8AM-5PM | www.cadt.edu.kh"
+            };
+
+            document.getElementById("description").innerText = content[tab];
+
+            document.querySelectorAll(".tab-btn").forEach(button => {
+                button.classList.remove("active");
+            });
+
+            btn.classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>

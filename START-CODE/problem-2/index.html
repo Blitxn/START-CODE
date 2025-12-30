@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Problem-1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind (Offline) -->
+    <script src="../tailwind-browser.js"></script>
+  <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #cfd3d8;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            background-color: #9aa0a6;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 8px;
+        }
+
+        .nav span {
+            background-color: #aeb4ba;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .hero {
+            background-color: #eeeeee;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            background-color: #9aa0a6;
+            height: 48px;
+            max-width: 600px;
+            margin: 0 auto 16px;
+            border-radius: 4px;
+        }
+
+        .hero p {
+            background-color: #c5c9ce;
+            height: 24px;
+            max-width: 400px;
+            margin: 0 auto 20px;
+            border-radius: 4px;
+        }
+
+        .hero button {
+            background-color: #7d838a;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .cards {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #dcdfe3;
+            height: 160px;
+            border-radius: 6px;
+        }
+        footer {
+            background-color: #cfd3d8;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-box {
+            background-color: #9aa0a6;
+            color: white;
+            display: inline-block;
+            padding: 8px 24px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Logo (32 x 16)</div>
+        <div class="nav">
+            <span>Nav Item</span>
+            <span>Nav Item</span>
+            <span>Nav Item</span>
+        </div>
+    </header>
+    <section class="hero">
+        <h1></h1>
+        <p></p>
+        <button>Button</button>
+    </section>
+    <section class="cards">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+        <div class="card">Card 5</div>
+        <div class="card">Card 6</div>
+    </section>
+    <footer>
+        <div class="footer-box">Footer (16 x 4)</div>
+    </footer>
+
+</body>
+
+</html>
